@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.HomeFragment">
+   <androidx.core.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/nestedScrollView"
+      >
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_height="match_parent"
+          android:layout_width="match_parent"
+          android:id="@+id/constraintLayoutMain"
+
+          >
+         <View android:layout_height="0dp"
+               android:layout_width="match_parent"
+               android:id="@+id/backgroundColor"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+             android:background="@drawable/bg_gradient"
+            />
+         <View
+             android:id="@+id/curveView"
+             android:layout_width="match_parent"
+             android:layout_height="320dp"
+             android:background="@drawable/bg_curve"
+             app:layout_constraintTop_toTopOf="parent"
+             />
+
+
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/tvCityName"
+             android:textSize="46sp"
+             android:fontFamily="@font/nunito_sans_bold"
+             tools:text="Meerut"
+             app:layout_constraintBottom_toTopOf="@id/ivWeatherImg"
+             android:textStyle="bold"
+             android:layout_marginTop="20dp"
+             app:layout_constraintTop_toTopOf="@id/curveView"
+             app:layout_constraintEnd_toEndOf="@id/curveView"
+             app:layout_constraintStart_toStartOf="@id/curveView"
+             android:textColor="@color/black"
+             />
+
+         <TextView
+             android:id="@+id/tvDesc"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:fontFamily="@font/nunito_sans"
+             tools:text="Sunny, sometimes overcast"
+             android:textColor="@color/black"
+             android:layout_marginTop="5dp"
+             android:textSize="14sp"
+             android:textAllCaps="true"
+             app:layout_constraintEnd_toEndOf="@id/curveView"
+             app:layout_constraintStart_toStartOf="@id/curveView"
+             app:layout_constraintTop_toBottomOf="@id/tvCityName" />
+
+
+         <com.google.android.material.imageview.ShapeableImageView
+             android:id="@+id/ivWeatherImg"
+             android:layout_width="350dp"
+             android:layout_height="250dp"
+             tools:src="@drawable/img_50n"
+             app:layout_constraintBottom_toBottomOf="@id/curveView"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="@id/curveView"
+             android:layout_marginTop="240dp"
+
+
+        />
+
+         <ImageView
+             android:layout_width="28dp"
+             android:layout_height="28dp"
+             android:id="@+id/ivHumidity"
+             android:layout_marginTop="55dp"
+             app:layout_constraintTop_toBottomOf="@id/ivWeatherImg"
+             android:src="@drawable/ic__humidity"
+             app:layout_constraintStart_toStartOf="parent"
+             android:layout_marginStart="60dp"
+             android:visibility="invisible"
+             tools:visibility="visible"
+            />
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textColor="@color/black"
+             android:id="@+id/tvHumidity"
+             tools:text="36-38%"
+             android:paddingTop="10dp"
+             android:fontFamily="@font/nunito_sans"
+             app:layout_constraintTop_toBottomOf="@id/ivHumidity"
+             app:layout_constraintStart_toStartOf="@id/ivHumidity"
+             app:layout_constraintEnd_toEndOf="@id/ivHumidity"
+            />
+
+         <TextView
+             android:id="@+id/tvTemperature"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:layout_constraintEnd_toStartOf="@id/ivWind"
+             app:layout_constraintStart_toEndOf="@id/ivHumidity"
+             app:layout_constraintTop_toBottomOf="@id/ivWeatherImg"
+             android:layout_marginTop="32dp"
+             tools:text="27\u2103"
+             android:textSize="66sp"
+             android:textColor="#2B2929"
+             android:fontFamily="@font/nunito_sans_bold"
+            />
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+            tools:text="Feels like 24\u2103"
+            android:id="@+id/tvFeelsLike"
+            app:layout_constraintTop_toBottomOf="@id/tvTemperature"
+            app:layout_constraintStart_toStartOf="@id/tvTemperature"
+            app:layout_constraintEnd_toEndOf="@id/tvTemperature"
+             app:layout_constraintBottom_toBottomOf="@id/tvTemperature"
+             android:fontFamily="@font/nunito_sans"
+             android:textSize="16sp"
+             android:paddingTop="5dp"
+             android:textColor="#2E2D2D"
+            />
+
+
+         <ImageView
+             android:layout_width="36dp"
+             android:layout_height="30dp"
+             android:id="@+id/ivWind"
+             android:layout_marginTop="54dp"
+             app:layout_constraintTop_toBottomOf="@id/ivWeatherImg"
+             android:src="@drawable/baseline_air_black_24dp"
+             app:layout_constraintEnd_toEndOf="parent"
+             android:layout_marginEnd="60dp"
+             android:visibility="invisible"
+             tools:visibility="visible"
+             />
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textColor="@color/black"
+             android:id="@+id/tvWind"
+             tools:text="24km/hr"
+             android:paddingTop="8dp"
+             android:fontFamily="@font/nunito_sans"
+             app:layout_constraintTop_toBottomOf="@id/ivWind"
+             app:layout_constraintStart_toStartOf="@id/ivWind"
+             app:layout_constraintEnd_toEndOf="@id/ivWind"
+             />
+
+
+
+         <TextView
+             android:id="@+id/tvTodayTemp"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/tvFeelsLike"
+             app:layout_constraintStart_toStartOf="parent"
+             android:text="Next 24hr Forecast"
+             android:layout_marginStart="16dp"
+             android:textColor="@color/black"
+             android:textSize="16sp"
+             android:fontFamily="@font/nunito_sans_bold"
+             android:layout_marginTop="35dp"
+             android:visibility="invisible"
+             tools:visibility="visible"
+            />
+
+
+
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/rvTodaysTemp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/tvTodayTemp"
+             app:layout_constraintBottom_toBottomOf="parent"
+             tools:listitem="@layout/temperature_layout"
+             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+             android:orientation="horizontal"
+             android:paddingBottom="10dp"
+             android:layout_marginStart="10dp"
+             android:layout_marginBottom="10dp"
+             android:layout_marginTop="10dp"
+            />
+
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+   </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Weathersi</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="city_names">
+        <item>Goa</item>
+        <item>Delhi</item>
+        <item>Haryana</item>
+        <item>Chandigarh</item>
+        <item>Meerut</item>
+        <item>Bihar</item>
+        <item>Simbo</item>
+    </string-array>
+</resources>
