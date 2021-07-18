@@ -1,4 +1,6 @@
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/50069977/126076948-f1042d19-209c-44fd-b2e5-352a97b075bf.gif)
+
 # Weathersi
 
-![screen-gif] (https://user-images.githubusercontent.com/50069977/126076853-34a9d6bf-7ccf-4c67-8c02-6dc10e2c3de3.mp4)
+  Weathersi is a simple weather forecast app, which uses some APIs to fetch 5 day / 3 hour forecast data from the OpenWeatherMap and to fetch places,cities,counties,coords etc.   from Algolia Places. The main goal of this app is to be a sample of how to build an high quality Android application that uses the Architecture components and coroutines in Kotlin.
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/50069977/126076948-f1042d19-209c-44fd-b2e5-352a97b075bf.gif)
