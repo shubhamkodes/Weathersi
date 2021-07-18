@@ -1,7 +1,7 @@
 
 # Weathersi
 
-  Weathersi is a simple weather forecast app, which uses some APIs to fetch 5 day / 3 hour forecast data from the OpenWeatherMap and to fetch places,cities,counties,coords etc.   from Algolia Places.
+  Weathersi is a simple weather forecast app, which uses some APIs to fetch current weather and next 24 hour forecast data from the OpenWeatherMap and to fetch by taking gps coordinates of your current geolocation.
   
   The main goal of this app is to be a sample of how to build an high quality Android application that uses the Architecture components and coroutines in Kotlin.
 
