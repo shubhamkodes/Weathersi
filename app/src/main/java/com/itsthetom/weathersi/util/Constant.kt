@@ -4,7 +4,7 @@ import com.itsthetom.weathersi.R
 
 object Constant {
     public val BASE_URL="https://api.openweathermap.org"
-    public val API_KEY="c5d5a63fa24baa38422b80ce49e1119d"
+    public val API_KEY="Your Api Key"
 
     public val weatherIcon= mapOf<String,Int>(
         Pair("01d", R.drawable.img_01d),
